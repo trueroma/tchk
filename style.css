@@ -1,0 +1,785 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:400&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 1vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+.logo-wrapper {
+  width: 75vw;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first {
+  height: 100vh;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 12.3333333333vh;
+  width: 100vw;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+
+.offer {
+  width: 75vw;
+  max-width: 1440px;
+  margin-top: 10vh;
+  display: flex;
+  height: 66.6666666667vh;
+}
+.offer .content, .offer .tree, .offer .pic {
+  width: 50%;
+}
+.offer .tree {
+  background: url("content/flowers.png") no-repeat center/contain;
+}
+.offer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 5vh;
+  height: 50vh;
+}
+.offer .content h1 {
+  font-size: 5rem;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.offer .content p, .offer .content .offer-button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+.offer .content p {
+  width: 80%;
+}
+
+.offer-button {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s;
+  transform: translateY(-90%);
+}
+
+.button-border, .button-background, .offer-button, .button-offer-wrapper {
+  width: 20rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+}
+
+.button-border {
+  cursor: pointer;
+  border: #000 solid 0.2rem;
+  box-sizing: border-box;
+  transform: translateY(-200%);
+}
+
+.button-background {
+  background: url("content/new_button_top.jpg") no-repeat center/cover;
+  transition: transform 0.3s;
+  transform: translateY(15%) translateX(3%);
+}
+
+.button-offer-wrapper:hover .offer-button {
+  transform: translateY(-100%);
+}
+
+.button-offer-wrapper:hover .button-background {
+  transform: translateY(0) translateX(0);
+}
+
+.footer {
+  height: 21vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2vh;
+  box-sizing: border-box;
+}
+
+.down-wrapper {
+  width: 1.5rem;
+  height: 3rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.down {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-right: solid #000 0.1rem;
+  border-bottom: solid #000 0.1rem;
+  transform: rotate(45deg);
+  transition: 0.5s all;
+}
+
+.down-wrapper:hover .down {
+  transform: translateY(100%) rotate(45deg);
+  border-right: solid #00f 0.1rem;
+  border-bottom: solid #00f 0.1rem;
+}
+
+.path-wrapper {
+  align-items: flex-start;
+  height: auto;
+}
+
+.path {
+  padding-top: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.path .step {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+}
+
+p {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+section:nth-child(2) {
+  height: auto;
+}
+
+.headline {
+  margin-top: 15vh;
+  margin-bottom: 8vh;
+  text-align: center;
+  padding: 0 17%;
+}
+
+h2 {
+  font-size: 4rem;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 5vh;
+}
+
+.switcher {
+  margin: 0 auto;
+  width: 22.5rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  background-color: #ececec;
+  cursor: pointer;
+}
+.switcher .switch {
+  display: none;
+}
+.switcher .lighter {
+  position: absolute;
+  width: 11rem;
+  height: 2.5rem;
+  border-radius: 1.5rem;
+  background-color: #fff;
+  transform: translateX(0.25rem);
+  animation: switch-back 0.3s ease-in-out;
+}
+.switcher p {
+  width: 50%;
+  text-align: center;
+  z-index: 1;
+}
+.switcher .switch:checked ~ .lighter {
+  animation: switch 0.3s ease-in-out;
+  transform: translateX(11.25rem);
+}
+
+.cashboxes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50vh;
+  margin-top: 8vh;
+}
+.cashboxes .arrow-wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cashboxes .arrow-slider {
+  width: 1.5rem;
+}
+.cashboxes .left-arr {
+  transform: rotate(180deg);
+}
+.cashboxes .arrow-shadow {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+.cashboxes .arrow-shadow:hover {
+  transform: perspective(1000px) scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.cashboxes .web-component-wrapper {
+  height: 100%;
+  width: 69vw;
+  display: flex;
+  overflow: hidden;
+}
+.cashboxes .web-component-wrapper .web-comp-slider {
+  width: 100%;
+  height: 100%;
+}
+
+.fz54 {
+  height: 50vh;
+}
+.fz54 .content {
+  margin: 0;
+  height: 100%;
+}
+.fz54 .content h2 {
+  margin: 0;
+}
+.fz54 .content p {
+  margin: 0;
+}
+.fz54 .pic {
+  background: url("content/54fz.png") no-repeat center/contain;
+}
+
+.fisk {
+  margin-top: 2rem;
+  display: flex;
+  width: 75vw;
+  max-width: 1440px;
+}
+.fisk .fisk-wrap {
+  display: flex;
+  width: 50%;
+}
+.fisk .fisk-desc {
+  width: 84%;
+}
+.fisk .fisk-desc p {
+  padding-top: 25px;
+  text-align: left;
+  font-size: 1rem;
+}
+.fisk .icon-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 16%;
+}
+
+h3 {
+  font-size: 1.8rem;
+  font-family: "Roboto", sans-serif;
+  margin: 0.5rem 0 0 0;
+}
+
+.lk {
+  max-width: 100vw;
+  width: 100vw;
+  height: 80vh;
+  box-sizing: border-box;
+  padding-left: 20vw;
+  overflow: hidden;
+}
+.lk .content {
+  width: 50%;
+  max-width: 720px;
+}
+.lk .ipad {
+  margin-left: 4vw;
+  width: 50vw;
+}
+.lk .ipad .ipad-shadow, .lk .ipad .ipad-frame, .lk .ipad .ipad-content {
+  height: 100%;
+}
+.lk .ipad .ipad-shadow {
+  background: url("content/bonus-card-ipad_shadow.png") no-repeat left/cover;
+}
+.lk .ipad .ipad-frame {
+  transform: translateY(-100%);
+  background: url("content/bonus-card-ipad_frame.png") no-repeat left/cover;
+}
+.lk .ipad .ipad-content {
+  background: url("content/ipad_slide_1.png") no-repeat left/cover;
+}
+
+.extra {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 47rem;
+}
+.extra .content {
+  height: 100%;
+  margin-top: 0;
+}
+.extra .content h2 {
+  margin-top: 0;
+}
+.extra .apple-pay {
+  background: url("content/gadgets.jpg") no-repeat center/contain;
+  width: 43%;
+  height: 100%;
+}
+
+.table {
+  display: block;
+}
+.table p {
+  width: 40%;
+  text-align: left;
+}
+.table b {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+}
+.table table, .table tr, .table th, .table td {
+  border-collapse: collapse;
+  box-sizing: border-box;
+  border-spacing: 0;
+  padding-top: 25px;
+}
+.table table th, .table tr th, .table th th, .table td th {
+  border-bottom: 1px solid #e5e5ea;
+}
+.table table th img, .table tr th img, .table th th img, .table td th img {
+  transform: translateY(6px);
+}
+.table table th:first-child, .table tr th:first-child, .table th th:first-child, .table td th:first-child {
+  width: 55%;
+}
+
+.fast .content {
+  width: 40%;
+  display: block;
+}
+.fast .content h2, .fast .content p {
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.ship {
+  background: url("content/ship.png") no-repeat center/contain;
+  width: 50%;
+  height: 100%;
+}
+
+.last {
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.05);
+}
+
+footer {
+  background: url("content/bottom_leftTiny.png") no-repeat 0 100%, url("content/top_rightTiny.png") no-repeat 100% 0;
+  height: 87.6666666667vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .input-wrapper {
+  width: 18rem;
+  border-bottom: 2px solid #111;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .input-wrapper input {
+  outline: none;
+  border: none;
+  font-size: 0.9rem;
+  height: 2rem;
+  text-align: center;
+}
+
+@keyframes switch {
+  from {
+    transform: translateX(0.25rem);
+  }
+  to {
+    transform: translateX(11.25rem);
+  }
+}
+@keyframes switch-back {
+  from {
+    transform: translateX(11.25rem);
+  }
+  to {
+    transform: translateX(0.25rem);
+  }
+}
+@keyframes ipad-swipe {
+  0% {
+    background: url("content/ipad_slide_1.png") no-repeat left/cover;
+  }
+  33% {
+    background: url("content/ipad_slide_2.png") no-repeat left/cover;
+  }
+  66% {
+    background: url("content/ipad_slide_3.png") no-repeat left/cover;
+  }
+  100% {
+    background: url("content/ipad_slide_1.png") no-repeat left/cover;
+  }
+}
+@keyframes swipe-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes swipe-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 1920px) {
+  h1 {
+    font-size: 96px !important;
+  }
+
+  h2 {
+    font-size: 76.8px !important;
+  }
+
+  h3 {
+    font-size: 34.56px !important;
+  }
+
+  .offer .content p {
+    font-size: 19.2px !important;
+  }
+
+  p {
+    font-size: 17.28px !important;
+  }
+
+  .arrow-shadow {
+    width: 57.6px !important;
+    height: 57.6px !important;
+  }
+
+  .web-component-wrapper {
+    width: 1324.8px !important;
+  }
+}
+@media (orientation: portrait) {
+  .logo-wrapper {
+    width: 90vw;
+  }
+
+  .offer {
+    width: 90vw;
+  }
+
+  .tree {
+    display: none;
+  }
+
+  .first {
+    background: url("content/cloud_general.png") no-repeat left/contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    width: 80vw;
+    font-size: 10rem !important;
+  }
+
+  .content {
+    width: 100% !important;
+  }
+
+  .greeter p {
+    width: 90vw !important;
+    font-size: 4rem !important;
+  }
+
+  .button-border, .button-background, .offer-button, .button-offer-wrapper {
+    width: 80rem;
+    height: 12rem;
+    border-radius: 1.2rem;
+    font-size: 3.6rem !important;
+  }
+
+  .button-border {
+    border: #000 solid 0.6rem;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .path {
+    display: block;
+    width: 100%;
+  }
+  .path .step {
+    padding-top: 25px;
+    width: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .path .step p {
+    font-size: 3rem;
+    text-align: left;
+  }
+  .path .arrow {
+    display: none;
+  }
+
+  .headline {
+    width: 90vw;
+  }
+
+  h2 {
+    font-size: 7rem !important;
+    width: 100% !important;
+  }
+
+  p {
+    width: 100% !important;
+    margin-top: 25px !important;
+    font-size: 3rem !important;
+  }
+
+  .switcher {
+    width: 90rem;
+    height: 12rem;
+    border-radius: 6rem;
+  }
+  .switcher .lighter {
+    position: absolute;
+    width: 44rem;
+    height: 10rem;
+    border-radius: 5rem;
+    transform: translateX(1rem);
+  }
+  .switcher .switch:checked ~ .lighter {
+    transform: translateX(45rem);
+  }
+  .switcher p {
+    margin-top: 0 !important;
+    font-size: 3rem;
+  }
+
+  .cashboxes {
+    width: 90vw;
+    height: 80vh;
+  }
+  .cashboxes .arrow-wrapper {
+    box-sizing: border-box;
+    padding-top: 25%;
+    align-items: flex-start;
+    width: 10rem;
+    z-index: 1;
+  }
+  .cashboxes .arrow-wrapper .arrow-shadow {
+    width: 10rem;
+    height: 10rem;
+  }
+  .cashboxes .arrow-wrapper .arrow-shadow .arrow-slider {
+    width: 5rem;
+  }
+  .cashboxes .web-component-wrapper {
+    position: absolute;
+    height: 80vh;
+    width: 90vw;
+  }
+
+  .fz54 {
+    height: 80vh;
+    flex-direction: column;
+  }
+  .fz54 .content {
+    width: 100%;
+    height: auto !important;
+    display: block;
+    margin-bottom: 25px;
+  }
+  .fz54 .pic {
+    width: 100%;
+    height: 40%;
+  }
+
+  .fisk {
+    width: 90vw;
+    display: block;
+  }
+  .fisk .fisk-wrap {
+    margin-top: 25px;
+    width: 100%;
+  }
+  .fisk .fisk-wrap p {
+    padding-top: 0;
+  }
+  .fisk .fisk-wrap h3 {
+    padding-top: 3rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  .lk {
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    padding-left: 5vw;
+  }
+  .lk h2 {
+    font-size: 6.5rem !important;
+  }
+  .lk .content {
+    width: 90vw;
+    height: auto;
+  }
+  .lk .ipad {
+    margin-left: 0;
+    width: 95vw;
+    height: 60%;
+  }
+
+  .extra {
+    flex-direction: column;
+    height: auto;
+  }
+  .extra .content {
+    margin-bottom: 4rem;
+  }
+  .extra .content h3 {
+    margin-top: 5rem;
+  }
+  .extra .content p {
+    margin-top: 3rem !important;
+  }
+  .extra .apple-pay {
+    width: 100%;
+    height: 60vh;
+    background-position: left;
+  }
+
+  .table {
+    height: auto;
+  }
+
+  table img {
+    width: 27vw;
+  }
+  table th:nth-child(2) img {
+    transform: translateY(1px) !important;
+  }
+  table th:nth-child(3) img {
+    transform: translateY(2px) !important;
+  }
+  table td, table b {
+    font-size: 3rem !important;
+  }
+  table tr td:first-child {
+    padding-right: 4rem;
+  }
+
+  .fast {
+    display: block;
+  }
+  .fast .content {
+    width: 100%;
+    height: auto;
+  }
+  .fast .ship {
+    width: 100%;
+    height: 60%;
+  }
+
+  footer {
+    background-size: 50rem;
+  }
+  footer h2 {
+    text-align: center;
+  }
+  footer .input-wrapper {
+    width: 54rem;
+    height: 6rem;
+  }
+  footer .input-wrapper input {
+    height: 6rem;
+    font-size: 4rem;
+  }
+  footer .button-offer-wrapper {
+    margin-top: 10rem;
+  }
+
+  @keyframes switch {
+    from {
+      transform: translateX(1rem);
+    }
+    to {
+      transform: translateX(45rem);
+    }
+  }
+  @keyframes switch-back {
+    from {
+      transform: translateX(45rem);
+    }
+    to {
+      transform: translateX(1rem);
+    }
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

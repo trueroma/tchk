@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+</head>
+<body>
+    <section class="first">
+        <div class="header">
+            <div class="logo-wrapper">
+                <img src="content/tochka_logo.svg" alt="" class="logo">
+            </div>
+        </div>
+        <div class="offer greeter">
+            <div class="content">
+                <h1>Онлайн-касса под ключ</h1>
+                <p>Полный комплект для работы по 54-ФЗ: касса, фискальный накопитель, сканер. Мы сами бесплатно настроим кассу и зарегистрируем в налоговой, подключим к оператору фискальных данных и доставим в офис.</p>
+                <div class="button-offer-wrapper">
+                    <div class="button-background"></div>
+                    <div class="offer-button">Отправить заявку</div>
+                    <div class="button-border"></div>
+                </div>
+            </div>
+            <div class="tree"></div>
+        </div>
+        <div class="footer">
+            <div class="down-wrapper">
+                <div class="down"></div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="offer path-wrapper">
+            <div class="path">
+                <div class="step">
+                    <img src="content/icon_1.svg" alt="" class="icon">
+                    <p>Выберите кассу</p>
+                </div>
+
+                <img src="content/arrow.svg" alt="" class="arrow">
+
+                <div class="step">
+                    <img src="content/icon_2.svg" alt="" class="icon">
+                    <p>Выберите срок действия ОФД и фискального накопителя</p>
+                </div>
+
+                <img src="content/arrow.svg" alt="" class="arrow">
+
+                <div class="step">
+                    <img src="content/icon_3.svg" alt="" class="icon">
+                    <p>Оплатите покупку любым удобным способом</p>
+                </div>
+
+                <img src="content/arrow.svg" alt="" class="arrow">
+
+                <div class="step">
+                    <img src="content/icon_4.svg" alt="" class="icon">
+                    <p>Получите готовую к работе кассу через 2 недели</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="headline">
+            <h2>Выберите кассу, которая подойдёт именно вам</h2>
+            <p>У нас есть смарт-кассы Эвотор, в которые уже встроен планшет и их не надо ни к чему подключать — отличный вариант для небольшого бизнеса.</p>
+            <p>Есть кассы Атол, которые подключаются к любому вашему устройству: планшету, ноутбуку, стационарному компьютеру — обычно их используют большие рестораны и магазины.</p>
+        </div>
+        <label class="switcher" for="rad-evotor-atol">
+            <input type="checkbox" id="rad-evotor-atol" class="switch">
+            <div class="lighter"></div>
+            <p>Эвотор</p>
+            <p>Атол</p>
+        </label>
+        <div class="cashboxes">
+            <div class="arrow-wrapper">
+                <div class="arrow-shadow">
+                    <img src="content/arrow_slider.svg" alt="" class="arrow-slider left-arr">
+                </div>
+            </div>
+            <div class="web-component-wrapper">
+                <div class="web-comp-slider">
+                    <cash-box></cash-box>
+                </div>
+            </div>
+            <div class="arrow-wrapper">
+                <div class="arrow-shadow">
+                    <img src="content/arrow_slider.svg" alt="" class="arrow-slider right-arr">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="offer fz54">
+            <div class="content">
+                <h2>Всё что нужно для работы по 54‑ФЗ</h2>
+                <p>Чтобы работать по закону, вам понадобятся фискальный накопитель и подключение к оператору фискальных данных. Их срок действия ограничен, поэтому спустя некоторое время придётся всё подключать заново.</p>
+                <p>Выберите, на какой срок вам нужны фискальный накопитель и подключение к оператору фискальных данных — мы всё настроим.</p>
+            </div>
+            <div class="pic"></div>
+        </div>
+        <div class="fisk">
+            <div class="fisk-wrap">
+                <div class="icon-wrap">
+                    <img src="content/icon_checked_blue.svg" alt="" class="checked">
+                </div>
+                <div class="fisk-desc">
+                    <h3>Фискальный накопитель</h3>
+                    <p>Карта памяти, которая хранит информацию обо всех выданных чеках, шифрует их и формирует код, который отправляется оператору фискальных данных.</p>
+                    <p><b>На какой срок:</b></p>
+                    <p>36 месяцев — 11 000 ₽</p>
+                    <p>15 месяцев — 8 000 ₽</p>
+                </div>
+            </div>
+            <div class="fisk-wrap">
+                <div class="icon-wrap">
+                    <img src="content/icon_checked_blue.svg" alt="" class="checked">
+                </div>
+                <div class="fisk-desc">
+                    <h3>Оператор фискальных данных</h3>
+                    <p>Компания, которая собирает всю информацию об операциях онлайн-касс и отправляет её в налоговую.</p>
+                    <p><b>На какой срок:</b></p>
+                    <p>36 месяцев — 3 000 ₽</p>
+                    <p>15 месяцев — 1 500 ₽</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+    <div class="offer lk">
+        <div class="content">
+            <h2>Личный кабинет для всего</h2>
+            <p>Большой выбор бесплатных и платных приложений для вашей кассы, аналитика продаж, управление доступом кассиров.</p>
+            <p>Подключите интеграцию с 1С, эквайрингом или с системой лояльности для ваших клиентов — всё в одном месте. Платите только за те опции, которыми вы пользуетесь.</p>
+            <p><b>Работает только с кассами Эвотор.</b></p>
+        </div>
+        <div class="ipad">
+            <div class="ipad-shadow">
+                <div class="ipad-content"></div>
+            </div>
+            <div class="ipad-frame"></div>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="offer extra">
+            <div class="content">
+                <h2>Дополнительное оборудование и сервисы</h2>
+                <h3>Что ещё можно подключить</h3>
+                <p>Закажите ящик для наличных, весы, принтер этикеток, эквайринговый терминал, 1D- или 2D-сканер штрих-кодов. Сделать это можно в любой момент в личном кабинете.</p>
+                <h3>Электронная программа лояльности</h3>
+                <p>C помощью сервиса Точки создайте карты лояльности, которые будут всегда в телефонах ваших клиентов. Делайте скидки, начисляйте бонусы и рассказывайте об акциях, чтобы привлечь и удержать покупателей. От 500 ₽ в месяц.</p>
+                <h3>Торговый эквайринг</h3>
+                <p>Подключаем бесплатно, даём выгодную ставку и сразу зачисляем деньги с эквайринга к вам на расчётный счёт.</p>
+            </div>
+            <div class="apple-pay"></div>
+        </div>
+    </section>
+    <section>
+        <div class="offer table">
+            <h2>Покупаете всего один раз. Выгодно</h2>
+            <p>Вы покупаете кассу со всем оборудованием и подключением к ОФД и больше не платите ни что никогда, кроме расходных материалов — услуг связи и кассовой ленты.</p>
+            <table>
+                <tr class="table-header">
+                    <th></th>
+                    <th><img src="content/flag1.png" alt="" class="compare-tochka"></th>
+                    <th><img src="content/flag2.png" alt="" class="compare-others"></th>
+                </tr>
+                <tr>
+                    <td><b>Регистрация кассы в налоговой</b></td>
+                    <td>0 ₽</td>
+                    <td>6 000 ₽</td>
+                </tr>
+                <tr>
+                    <td><b>Доставка кассы</b></td>
+                    <td>0 ₽</td>
+                    <td>600 ₽</td>
+                </tr>
+                <tr>
+                    <td><b>Выпуск КЭП</b></td>
+                    <td>0 ₽</td>
+                    <td>2 000 ₽</td>
+                </tr>
+                <tr>
+                    <td><b>Абонентская плата за софт</b></td>
+                    <td>0 ₽</td>
+                    <td>500 ₽ ежемесячно</td>
+                </tr>
+                <tr>
+                    <td><b>Касса</b></td>
+                    <td>от 7 500 ₽</td>
+                    <td>от 7 500 ₽</td>
+                </tr>
+                <tr>
+                    <td><b>ОФД</b></td>
+                    <td>от 1 500 ₽</td>
+                    <td>от 3 000 ₽</td>
+                </tr>
+                <tr>
+                    <td><b>Фискальный накопитель</b></td>
+                    <td>от 8 000 ₽</td>
+                    <td>от 8 000 ₽</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <section class="last">
+        <div class="offer fast">
+            <div class="content">
+                <h2>Не заставим себя ждать</h2>
+                <p>Проверим вашу заявку за 3 дня и сразу после оплаты начнём готовить кассу к отправке.</p>
+                <p>На курьерскую доставку уйдёт до 5 дней</p>
+            </div>
+            <div class="ship"></div>
+        </div>
+    </section>
+    <footer>
+        <h2>Пора подключаться</h2>
+        <div class="input-wrapper">
+            <input placeholder="+7 (000) 000 00 00">
+        </div>
+        <div class="button-offer-wrapper">
+            <div class="button-background"></div>
+            <div class="offer-button">Отправить заявку</div>
+            <div class="button-border"></div>
+        </div>
+    </footer>
+</body>
+</html>
